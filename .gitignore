@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+dist/
+uploads/
+.env
+.env.local
+.env.*.local
+*.log
+coverage/
+backups/
+tsconfig.tsbuildinfo
+
+.wrangler/
+.dev.vars
+.dev.vars.*

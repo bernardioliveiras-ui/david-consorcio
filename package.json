@@ -1,0 +1,54 @@
+{
+  "name": "david-consorcio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "vinext dev",
+    "build": "vinext build",
+    "preview": "wrangler dev",
+    "deploy": "npx @vinext/cloudflare deploy --skip-build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "db:migrate": "wrangler d1 migrations apply DB --remote",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "db:execute": "wrangler d1 execute DB --remote",
+    "r2:create": "wrangler r2 bucket create david-consorcio-storage",
+    "r2:list": "wrangler r2 bucket list",
+    "types": "wrangler types"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "csv-parse": "^6.1.0",
+    "csv-stringify": "^6.6.0",
+    "luxon": "^3.7.2",
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "zod": "^3.25.76",
+    "react-server-dom-webpack": "19.3.0",
+    "@vinext/cloudflare": "1.0.0-beta.8"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/luxon": "^3.7.1",
+    "@types/node": "^22.19.19",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^27.2.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16",
+    "vinext": "1.0.0-beta.10",
+    "@cloudflare/vite-plugin": "1.54.11",
+    "@vitejs/plugin-rsc": "0.5.35",
+    "vite": "8.3.0",
+    "wrangler": "4.133.0"
+  }
+}

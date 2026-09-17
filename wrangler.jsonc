@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "david-consorcio",
+  "compatibility_date": "2026-09-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "./worker.ts",
+  "preview_urls": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "david-consorcio",
+      "database_id": "74d5285a-0a64-4818-8d7b-fa6bbc47e24d",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "STORAGE",
+      "bucket_name": "david-consorcio-storage","preview_bucket_name": "david-consorcio-storage"
+    }
+  ],
+  "triggers": {
+    "crons": ["* * * * *"]
+  }
+}
